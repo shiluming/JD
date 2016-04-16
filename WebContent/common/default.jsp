@@ -4,9 +4,9 @@
 <script type="text/javascript" src="http://cdn.hcharts.cn/jquery/jquery-1.8.3.min.js"></script>
 <script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/highcharts.js"></script>
 <script type="text/javascript" src="http://cdn.hcharts.cn/highcharts/exporting.js"></script>
-
- <script type="text/javascript">
-
+<script type="text/javascript" src="${pageContext.request.contextPath}/bootstrap3/js/comment.js"></script>
+<script type="text/javascript" >
+ 
  $(function () {
 	 var t1,t2,t3,t4,t5,t6,t7;
 	 $.get("${pageContext.request.contextPath}/analyse/getpriceAnay.do",function(data,status){
@@ -73,13 +73,34 @@
 	 });
 	 
 	 var all = t1+t2+t3+t4+t5+t6+t7;
-	
-	    
 	});
-</script>
  
+function btn_click() {
+	var id = $("#id").val();
+	btn_comment(id);
+}
+</script>
+<div class="row">
+	<div class="col-lg-4">
+	<div class="input-group">
+      <input type="text" id="id" class="form-control" placeholder="输入商品ID">
+      <span class="input-group-btn">
+        <button class="btn btn-default" type="button" onclick="btn_click()">评论分析</button>
+      </span>
+    </div><!-- /input-group -->
+	</div>
+	<div class="col-lg-8">
+	
+	</div>
+</div>
+<br>
+ <div id="content" class="panel panel-default">
+ <h4><div class="panel-heading" style="text-align: center" id="title"></div></h4	>
+  <div class="panel-heading">
+    <h3 class="panel-title"><b>数据分析展示台:</b><div style="text-align: center"><b id=""></b></div></h3>
+  </div>
 <div id="container" style="min-width:700px;height:400px">
-
 
 </div>
 
+</div>

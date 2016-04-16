@@ -1,5 +1,6 @@
 package com.xn.utils;
 
+import java.io.BufferedReader;
 import java.io.BufferedWriter;
 import java.io.File;
 import java.io.IOException;
@@ -41,6 +42,21 @@ public class FileUtils {
 				// TODO Auto-generated catch block
 				e.printStackTrace();
 			}
+		}
+	}
+	/**
+	 * 获取文件的读流 
+	 * @param path
+	 * @return
+	 */
+	public static BufferedReader reader(String path) {
+		Path p = Paths.get(path);
+		BufferedReader reader = null;
+		try {
+			reader = Files.newBufferedReader(p,StandardCharsets.UTF_8);
+			return reader;
+		} catch (IOException e) {
+			return reader;
 		}
 	}
 	/**

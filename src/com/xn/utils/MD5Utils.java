@@ -61,7 +61,7 @@ public class MD5Utils {
 	    public static void main(String[] args) {
 	    	MD5Utils getMD5 = new MD5Utils();
 	    	long start = System.currentTimeMillis();
-	        System.out.println(getMD5.GetMD5Code("0100000"));
+	        System.out.println(getMD5.GetMD5Code("1000023352"));
 	        String s = getMD5.GetMD5Code("1545851");
 	        System.out.println(s);
 	        System.out.println(s.substring(0, 2));

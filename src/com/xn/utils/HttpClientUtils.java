@@ -105,7 +105,7 @@ class CommentsThread extends Thread {
 	public void run() {
 		CloseableHttpResponse response = null;
 		
-		for(int i=1;i<=counts;i++) {
+		for(int i=0;i<counts;i++) {
 			String tempUrl = url.replace("||", String.valueOf(i));
 			String resultUrl = tempUrl.replace("%**%", itemid);
 			HttpGet get = new HttpGet(resultUrl);

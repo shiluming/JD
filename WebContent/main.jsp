@@ -10,6 +10,8 @@
 <link rel="stylesheet" href="${pageContext.request.contextPath}/css/equipment.css">
 <script src="${pageContext.request.contextPath}/bootstrap3/js/jquery-1.11.2.min.js"></script>
 <script src="${pageContext.request.contextPath}/bootstrap3/js/bootstrap.min.js"></script>
+<script src="${pageContext.request.contextPath}/bootstrap3/js/temp1.js"></script>
+
 <%
 
 	if(session.getAttribute("currentUser")==null){
@@ -19,7 +21,7 @@
 
 	String mainPage=(String)request.getAttribute("mainPage");
 	if(mainPage==null || mainPage.equals("")){
-		mainPage="/common/default2.jsp";
+		mainPage="/common/user_province.jsp";
 	}
  %>
 
